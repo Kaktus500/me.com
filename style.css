@@ -96,19 +96,6 @@ section {
     margin-bottom: 3rem;
 }
 
-.project-list {
-    list-style-type: none;
-}
-
-.project-list li {
-    margin-bottom: 1.5rem;
-}
-
-.project-title {
-    font-weight: bold;
-    color: var(--text-color);
-}
-
 footer {
     margin-top: 4rem;
     padding-top: 2rem;
@@ -125,4 +112,56 @@ footer {
     h1 {
         font-size: 2rem;
     }
+}
+
+/* --- NEW PROJECT LAYOUT --- */
+.project-item {
+margin-bottom: 2.5rem;
+}
+
+.project-header {
+display: flex;
+justify-content: space-between;
+align-items: baseline;
+margin-bottom: 0.2rem;
+}
+
+.project-title {
+font-size: 1.1rem;
+font-weight: 600;
+color: var(--text-color); /* Updated to match your root */
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.project-date {
+font-size: 0.9rem;
+color: var(--secondary-text); /* Updated to match your root */
+white-space: nowrap;
+}
+
+.project-tools {
+font-size: 0.85rem;
+font-family: monospace;
+color: var(--secondary-text); /* Updated to match your root */
+margin-bottom: 1rem;
+}
+
+.project-bullets {
+padding-left: 1.2rem;
+list-style-type: disc;
+}
+
+.project-bullets li {
+margin-bottom: 0.5rem;
+color: var(--text-color); /* Updated to match your root */
+}
+
+@media (max-width: 600px) {
+.project-header {
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 0.5rem;
+}
 }
