@@ -1,38 +1,6 @@
-/* Flexbox layout for the header */
-.header-layout {
-    display: flex;
-    align-items: center;       /* Centers the image vertically with the text */
-    justify-content: space-between;
-    gap: 2rem;                 /* Adds a nice gap between text and image */
-    margin-bottom: 3rem;
-}
-
-.header-text {
-    flex: 1;                   /* Tells the text to take up the remaining space */
-}
-
-/* The circular image styling */
-.header-image img {
-    width: 200px;              /* Adjust this to make the photo bigger/smaller */
-    height: 200px;             /* Must match the width to make a perfect circle */
-    border-radius: 50%;        /* The magic rule that turns a square into a circle */
-    object-fit: cover;         /* Prevents the image from stretching/squishing */
-    /*box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Optional: adds a subtle professional shadow */
-}
-
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-    .header-layout {
-        flex-direction: column-reverse; /* Stacks image on top of text on phones */
-        text-align: center;             /* Centers everything nicely on small screens */
-    }
-    
-    .header-image img {
-        margin-bottom: 1rem;            /* Adds space below the image on mobile */
-    }
-}
-
-/* CSS VARIABLES: Change your colors and fonts here! */
+/* =========================================
+   1. CSS VARIABLES (Color Palette & Fonts)
+   ========================================= */
 :root {
     --bg-color: #fcfcfc;
     --text-color: #333333;
@@ -41,7 +9,9 @@
     --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
-/* BASIC RESET */
+/* =========================================
+   2. BASIC RESET & BASE STYLES
+   ========================================= */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -58,7 +28,9 @@ body {
     padding: 2rem;
 }
 
-/* TYPOGRAPHY */
+/* =========================================
+   3. TYPOGRAPHY & LINKS
+   ========================================= */
 h1, h2, h3 {
     margin-bottom: 1rem;
     font-weight: 600;
@@ -74,94 +46,267 @@ p {
     color: var(--secondary-text);
 }
 
-a {
+/* Standard inline text links */
+p a, .header-text a {
     color: var(--accent-color);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.2s ease;
 }
 
-a:hover {
+p a:hover, .header-text a:hover {
     border-bottom: 1px solid var(--accent-color);
 }
 
-/* LAYOUT & SECTIONS */
+/* =========================================
+   4. HEADER & PROFILE IMAGE
+   ========================================= */
 header {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid #eaeaea;
 }
 
+/* Flexbox layout for the header */
+.header-layout {
+    display: flex;
+    align-items: center;       
+    justify-content: space-between;
+    gap: 2rem;                 
+}
+
+.header-text {
+    flex: 1;                   
+}
+
+/* The circular image styling */
+.header-image img {
+    width: 200px;              
+    height: 200px;             
+    border-radius: 50%;        
+    object-fit: cover;         
+    /* box-shadow: 0 4px 10px rgba(0,0,0,0.1); */
+}
+
+/* =========================================
+   5. ICON LINKS (LinkedIn / GitHub)
+   ========================================= */
+.icon-only-link {
+    display: inline-block;
+    color: var(--text-color); 
+    transition: color 0.2s; 
+    margin-top: 0.5rem;
+}
+
+.icon-only-link svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;     
+    display: block;         
+}
+
+.icon-only-link:hover {
+    color: var(--accent-color);    
+}
+
+/* =========================================
+   6. SECTIONS & PROJECT CARDS
+   ========================================= */
 section {
     margin-bottom: 3rem;
 }
 
+.project-card {
+    display: flex;
+    gap: 1.5rem;               
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #eaeaea; 
+    align-items: flex-start;
+}
+
+/* The last card shouldn't have a border on the bottom */
+.project-card:last-child {
+    border-bottom: none;
+}
+
+/* Image styling */
+.project-image-link {
+    flex-shrink: 0;            
+    width: 240px;              
+    display: block;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #eaeaea; 
+    object-fit: cover;
+    transition: opacity 0.2s ease;
+}
+
+.project-image-link:hover .project-image {
+    opacity: 0.85;             
+}
+
+/* Content styling */
+.project-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+}
+
+.project-title a {
+    color: var(--text-color);
+    text-decoration: none;
+    border: none;
+    transition: color 0.2s ease;
+}
+
+.project-title a:hover {
+    color: var(--accent-color);
+}
+
+.project-summary {
+    font-size: 1rem;
+    color: var(--secondary-text);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Date and Read More link */
+.project-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.project-date {
+    font-weight: 700;
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+}
+
+.read-more {
+    font-size: 0.95rem;
+    color: var(--secondary-text);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    align-self: flex-start; 
+    transition: all 0.2s ease;
+}
+
+.read-more:hover {
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
 footer {
     margin-top: 4rem;
     padding-top: 2rem;
     border-top: 1px solid #eaeaea;
     font-size: 0.9rem;
     text-align: center;
+    color: var(--secondary-text);
 }
 
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 600px) {
+/* =========================================
+   8. MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 650px) {
     body {
         padding: 1.5rem;
     }
+
     h1 {
         font-size: 2rem;
     }
+
+    /* Mobile Header Layout */
+    .header-layout {
+        flex-direction: column-reverse; 
+        text-align: center;             
+    }
+    
+    .header-image img {
+        margin-bottom: 1rem;            
+    }
+
+    /* Center the icons on mobile header */
+    .header-layout .icon-only-link {
+        margin: 0.5rem auto;
+    }
+
+    /* Mobile Project Cards */
+    .project-card {
+        flex-direction: column; 
+        gap: 1rem;
+    }
+    
+    .project-image-link {
+        width: 100%;            
+        max-width: 400px;
+    }
 }
 
-/* --- NEW PROJECT LAYOUT --- */
-.project-item {
-margin-bottom: 2.5rem;
+/* =========================================
+   9. SUB-PAGE (ARTICLE) STYLES
+   ========================================= */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--secondary-text);
+    margin-bottom: 2rem;
+    text-decoration: none;
+    border: none;
 }
 
-.project-header {
-display: flex;
-justify-content: space-between;
-align-items: baseline;
-margin-bottom: 0.2rem;
+.back-link:hover {
+    color: var(--accent-color);
+    border: none;
 }
 
-.project-title {
-font-size: 1.1rem;
-font-weight: 600;
-color: var(--text-color); /* Updated to match your root */
-display: flex;
-align-items: center;
-gap: 8px;
+.article-header {
+    margin-bottom: 2.5rem;
 }
 
-.project-date {
-font-size: 0.9rem;
-color: var(--secondary-text); /* Updated to match your root */
-white-space: nowrap;
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    font-family: monospace;
 }
 
-.project-tools {
-font-size: 0.85rem;
-font-family: monospace;
-color: var(--secondary-text); /* Updated to match your root */
-margin-bottom: 1rem;
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+    margin-bottom: 2.5rem;
 }
 
-.project-bullets {
-padding-left: 1.2rem;
-list-style-type: disc;
+.article-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
 }
 
-.project-bullets li {
-margin-bottom: 0.5rem;
-color: var(--text-color); /* Updated to match your root */
-}
-
-@media (max-width: 600px) {
-.project-header {
-    flex-direction: column;
-    gap: 0.2rem;
-    margin-bottom: 0.5rem;
-}
+.article-content li {
+    margin-bottom: 0.75rem;
 }
