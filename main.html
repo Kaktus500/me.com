@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Delseith</title>
+    <style>
+        /* CSS VARIABLES: Change your colors and fonts here! */
+        :root {
+            --bg-color: #fcfcfc;
+            --text-color: #333333;
+            --accent-color: #0056b3;
+            --secondary-text: #666666;
+            --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        /* BASIC RESET */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            max-width: 800px; /* Keeps line lengths readable */
+            margin: 0 auto;   /* Centers the site on the screen */
+            padding: 2rem;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text-color);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--secondary-text);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom: 1px solid var(--accent-color);
+        }
+
+        /* LAYOUT & SECTIONS */
+        header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .project-list {
+            list-style-type: none;
+        }
+
+        .project-list li {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-title {
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eaeaea;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-layout">
+    <div class="header-text">
+        <p>Hi, I'm Paul.</p>
+        <p>I am an electrical engineer interested in topics where software interacts with the physical world. 
+            So far this has mostly focused around various topics related to electric vehicles. 
+            I currently work at <a href="https://www.deepdrive.tech/" target="_blank">DeepDrive GmbH</a> where I work on a variety of software topics related to the development of motor inverters for novel automotive drive units.</p>
+        
+        <a href="https://www.linkedin.com/in/paul-delseith/" target="_blank" class="icon-only-link" aria-label="My LinkedIn Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+        </a>
+    </div>
+
+    <div class="header-image">
+        <img src="profile_pic.jpeg" alt="Me">
+    </div>
+    </header>
+
+
+    <section id="projects">
+        <h2>Work</h2>
+        <ul class="project-list">
+            <li>
+                <div class="project-title"><a href="#">Project Name One</a></div>
+                <p>A brief description of what this project is, what technologies or methodologies you used, and what the outcome was.</p>
+            </li>
+            <li>
+                <div class="project-title"><a href="#">Project Name Two</a></div>
+                <p>Another description. Keep it concise but descriptive enough to spark interest.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>A selection of some of the projects I worked on.</p>
+        <ul class="project-list">
+            <li>
+                <div class="project-title"><a href="#">Project Name One</a></div>
+                <p>A brief description of what this project is, what technologies or methodologies you used, and what the outcome was.</p>
+            </li>
+            <li>
+                <div class="project-title"><a href="#">Project Name Two</a></div>
+                <p>Another description. Keep it concise but descriptive enough to spark interest.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>The best way to reach me is via email at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
+        <p>You can also find me on <a href="https://github.com/yourusername" target="_blank">GitHub</a> and <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 [Your Name]. Built with plain HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* Flexbox layout for the header */
+.header-layout {
+    display: flex;
+    align-items: center;       /* Centers the image vertically with the text */
+    justify-content: space-between;
+    gap: 2rem;                 /* Adds a nice gap between text and image */
+    margin-bottom: 3rem;
+}
+
+.header-text {
+    flex: 1;                   /* Tells the text to take up the remaining space */
+}
+
+/* The circular image styling */
+.header-image img {
+    width: 150px;              /* Adjust this to make the photo bigger/smaller */
+    height: 150px;             /* Must match the width to make a perfect circle */
+    border-radius: 50%;        /* The magic rule that turns a square into a circle */
+    object-fit: cover;         /* Prevents the image from stretching/squishing */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Optional: adds a subtle professional shadow */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .header-layout {
+        flex-direction: column-reverse; /* Stacks image on top of text on phones */
+        text-align: center;             /* Centers everything nicely on small screens */
+    }
+    
+    .header-image img {
+        margin-bottom: 1rem;            /* Adds space below the image on mobile */
+    }
+}
+
+/* CSS VARIABLES: Change your colors and fonts here! */
+:root {
+    --bg-color: #fcfcfc;
+    --text-color: #333333;
+    --accent-color: #0056b3;
+    --secondary-text: #666666;
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* BASIC RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    max-width: 800px; /* Keeps line lengths readable */
+    margin: 0 auto;   /* Centers the site on the screen */
+    padding: 2rem;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--secondary-text);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s ease;
+}
+
+a:hover {
+    border-bottom: 1px solid var(--accent-color);
+}
+
+/* LAYOUT & SECTIONS */
+header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.project-list {
+    list-style-type: none;
+}
+
+.project-list li {
+    margin-bottom: 1.5rem;
+}
+
+.project-title {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eaeaea;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+    body {
+        padding: 1.5rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
