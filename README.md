@@ -1,2 +1,1 @@
-# Personal Website
-This is the source code for my personal website.
+# Me, Myself & I ... plus some Claude
