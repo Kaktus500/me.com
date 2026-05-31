@@ -13,11 +13,11 @@
 
 /* The circular image styling */
 .header-image img {
-    width: 150px;              /* Adjust this to make the photo bigger/smaller */
-    height: 150px;             /* Must match the width to make a perfect circle */
+    width: 200px;              /* Adjust this to make the photo bigger/smaller */
+    height: 200px;             /* Must match the width to make a perfect circle */
     border-radius: 50%;        /* The magic rule that turns a square into a circle */
     object-fit: cover;         /* Prevents the image from stretching/squishing */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Optional: adds a subtle professional shadow */
+    /*box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Optional: adds a subtle professional shadow */
 }
 
 /* Mobile responsiveness */
