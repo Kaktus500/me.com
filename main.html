@@ -10,16 +10,21 @@
 
     <header class="header-layout">
     <div class="header-text">
-        <p>Hi, I'm Paul.</p>
+        <p>Hi, I'm Paul (^-^)/</p>
         <p>I am an electrical engineer interested in topics where software interacts with the physical world. 
             So far this has mostly focused around various topics related to electric vehicles. 
             I currently work at <a href="https://www.deepdrive.tech/" target="_blank">DeepDrive GmbH</a> where I work on a variety of software topics related to the development of motor inverters for novel automotive drive units.</p>
         
-        <a href="https://www.linkedin.com/in/paul-delseith/" target="_blank" class="icon-only-link" aria-label="My LinkedIn Profile">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg>
-        </a>
+        <div class="contact-links">
+        <a href="mailto:delseith.paul@gmail.com">delseith.paul@gmail.com</a>
+        <span class="separator">|</span>
+        <span class="social-text-item">
+        <svg class="decorative-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+        <a href="https://www.linkedin.com/in/paul-delseith/" target="_blank">LinkedIn</a>
+        </span>
+        </div>
     </div>
 
     <div class="header-image">
@@ -29,7 +34,7 @@
 
 
     <section id="projects">
-    <h2>Selected Publications & Projects</h2>
+    <h2>Projects</h2>
     
     <div class="project-card">
         <a href="project-hyperdiffusion.html" class="project-image-link">
@@ -94,29 +99,75 @@
     </div>
     </section>
 
-    <section id="work">
-        <h2>Work</h2>
-        <p>A selection of some of the projects I worked on.</p>
-        <ul class="project-list">
-            <li>
-                <div class="project-title"><a href="#">Project Name One</a></div>
-                <p>A brief description of what this project is, what technologies or methodologies you used, and what the outcome was.</p>
-            </li>
-            <li>
-                <div class="project-title"><a href="#">Project Name Two</a></div>
-                <p>Another description. Keep it concise but descriptive enough to spark interest.</p>
-            </li>
-        </ul>
-    </section>
+    <section id="work-experience">
+    <h2>Work Experience</h2>
+    
+    <div class="project-card">
+        <a href="work-deepdrive.html" class="project-image-link">
+            <img src="deepdrive-photo.jpg" alt="DeepDrive Motor Technology" class="project-image">
+        </a>
+        
+        <div class="project-content">
+            <h3 class="project-title">
+                <a href="work-deepdrive.html">DeepDrive &mdash; Software Team</a>
+            </h3>
+            
+            <p class="project-summary">
+                Focused on inverter software, end-of-line testing, and vehicle control unit development. Developed a patent-pending rotor position sensor and built full-stack Python tooling for automated hardware testing and database management.
+            </p>
+            
+            <div class="project-footer">
+                <span class="project-date">May 2023 &mdash; Present | Munich, Germany</span>
+                <a href="work-deepdrive.html" class="read-more">Read more</a>
+            </div>
+        </div>
+    </div>
 
-    <section id="contact">
-        <h2>Get in Touch</h2>
-        <p>The best way to reach me is via email at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
-        <p>You can also find me on <a href="https://github.com/yourusername" target="_blank">GitHub</a> and <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>.</p>
+    <div class="project-card">
+        <a href="work-recogni.html" class="project-image-link">
+            <img src="recogni-photo.jpg" alt="Recogni Hardware" class="project-image">
+        </a>
+        
+        <div class="project-content">
+            <h3 class="project-title">
+                <a href="work-recogni.html">Recogni &mdash; NN Model Compression</a>
+            </h3>
+            
+            <p class="project-summary">
+                Converted the PyTorch implementation of Centermask to Recogni chip math, maintaining a relative performance drop of just 0.25% on the Coco 2017 dataset, and contributed to toolchain debugging.
+            </p>
+            
+            <div class="project-footer">
+                <span class="project-date">Oct 2023 &mdash; Dec 2023 | Munich, Germany</span>
+                <a href="work-recogni.html" class="read-more">Read more</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <a href="work-tesla.html" class="project-image-link">
+            <img src="tesla-photo.jpg" alt="Tesla Engineering" class="project-image">
+        </a>
+        
+        <div class="project-content">
+            <h3 class="project-title">
+                <a href="work-tesla.html">Tesla &mdash; Software Engineering Intern</a>
+            </h3>
+            
+            <p class="project-summary">
+                Developed and deployed a full-stack web application (React, Flask) on an internal Kubernetes cluster to monitor manufacturing data, complete with a Jenkins CI/CD pipeline and comprehensive automated testing.
+            </p>
+            
+            <div class="project-footer">
+                <span class="project-date">Jan 2023 &mdash; Apr 2023 | San Diego, US</span>
+                <a href="work-tesla.html" class="read-more">Read more</a>
+            </div>
+        </div>
+    </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 [Your Name]. Built with plain HTML & CSS.</p>
+        <p>&copy; 2026 Paul Delseith. Who knows what's going on with the rights to this ¯\_(ツ)_/¯</p>
     </footer>
 
 </body>

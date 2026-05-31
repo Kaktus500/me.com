@@ -23,7 +23,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
-    max-width: 800px; /* Keeps line lengths readable */
+    max-width: 900px; /* Keeps line lengths readable */
     margin: 0 auto;   /* Centers the site on the screen */
     padding: 2rem;
 }
@@ -56,6 +56,44 @@ p a, .header-text a {
 
 p a:hover, .header-text a:hover {
     border-bottom: 1px solid var(--accent-color);
+}
+
+.contact-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.contact-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.contact-links a:hover {
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.separator {
+    color: #cccccc; /* A nice light gray so the pipe doesn't distract from the words */
+    user-select: none; /* Prevents the user from accidentally highlighting the pipe when copying your email */
+}
+
+/* Groups the icon and text together seamlessly */
+.social-text-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; /* Adds a tiny bit of space between the logo and the word "LinkedIn" */
+}
+
+/* Colors the logo grey */
+.decorative-icon {
+    fill: var(--secondary-text); /* Pulls the grey from your root variables */
+    display: block;
 }
 
 /* =========================================
@@ -133,7 +171,7 @@ section {
 /* Image styling */
 .project-image-link {
     flex-shrink: 0;            
-    width: 240px;              
+    width: 200px;              
     display: block;
 }
 
