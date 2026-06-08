@@ -18,36 +18,57 @@
 
     <article>
         <header class="article-header">
-            <h1>HyperDiffusion with semantic decomposition: 3D shape generation</h1>
+            <h1>DeepDrive</h1>
             
             <div class="article-meta">
-                <span>April 2024 &mdash; August 2024</span>
-                <span>Tools: PyTorch, gcloud, wandb</span>
+                <span>May 2023 &mdash; Today</span>
+                <span>Topics: motor control, embedded systems, functional testing, software development</span>
             </div>
-
-            <a href="https://github.com/Kaktus500/HyperDiffusion_semantic_decomposition" target="_blank" class="icon-only-link" aria-label="GitHub Repository">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-            </a>
         </header>
-
-        <img src="hyperdiffusion-large.jpg" alt="HyperDiffusion Architecture" class="article-image">
-
+        
         <div class="article-content">
-            <h2>Project Overview</h2>
-            <p>This university project expanded on <a href="https://github.com/Rgtemze/HyperDiffusion" target="_blank">HyperDiffusion</a> by generating neural fields using diffusion models for novel 3D shape generation.</p>
+            <h2>Overview</h2>
+            <p>As a software engineer I work across multiple topics: integration of our technology in our own and customer vehicles, motor control testing and verification, and development of internal tools to support software development and testing.</p>
             
-            <h2>Key Contributions</h2>
-            <ul>
-                <li>Implementation of a pre-processing pipeline to make <a href="https://partnet.cs.stanford.edu/" target="_blank">PartNet</a> meshes suitable for neural field overfitting.</li>
-                <li>Implementation of a split neural field where different parts of the network encode different semantical parts of an object.</li>
-            </ul>
+            <h2>Main Projects & Contributions</h2>
+            
+            <details class="expandable-card">
+                <summary>Design and verification of a novel rotor position sensor (patent pending)</summary>
+                <div class="card-content">
+                    <p>For my master's thesis, I worked on a novel rotor position sensor for our dual-rotor technology, based on the direct measurement of the axial rotor flux.</p>
+                    <p><strong>Main Benefits:</strong></p>
+                    <ul>
+                        <li>Off-axis angle measurement capabilities.</li>
+                        <li>Requires only one part (the sensor element) with no need for a target.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="expandable-card">
+                <summary>Tesla Model 3 conversion with DeepDrive in-wheel motors</summary>
+                <div class="card-content">
+                    <p>Built the LV harness as well and software to make the vehicle run reliably and safely with our in-wheel motors.</p>
+                    <ul>
+                        <li>Implementation of a basic LV harness for routing of the necessary CAN buses, implementation of a safety shutdown button, and supply and control of an external parking brake actuator</li>
+                        <li>Built software to translate vehicle inputs (accelerator pedal, brake pedal) into motor commands</li>
+                        <li>Implemented basic safety features, like power limiting and speed limiting</li>
+                        <li>Vehicle was successfully presented to various customers as well as press, so far driven 5k+ km without any breakdowns</li>
+                        <li>Representation of the DeepDrive dual-rotor to engineers, journalists and managers at various automotive OEMs both in the car and outside of the car</li>
+                        <li>Setup of current and voltage measurement for WLTP measurements using a Yokogawa power analyzer</li>
+                        <li>Implementation of a python based GUI to enable a driver to follow the WLTP speed profile life while driving</li>
+                    </ul>
+                    <picture class="gallery-picture">
+                        <source srcset="tesla_dd.jpg.webp" type="image/webp">
+                        <img src="tesla_dd.jpg" alt="Tesla Model 3 with in-wheel motors" class="gallery-image">
+                    </picture>
+                </div>
+            </details>
+
         </div>
     </article>
 
     <footer>
-        <p>&copy; 2026 Paul Delseith.</p>
+        <p>&copy; 2026 Paul Delseith. Who knows what's going on with the rights to this ¯\_(ツ)_/¯</p>
     </footer>
 
 </body>
